@@ -1,1 +1,1 @@
-![image](randomim)
+![image](randomim)[link](smth.com)
