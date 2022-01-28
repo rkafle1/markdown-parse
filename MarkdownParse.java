@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class MarkdownParse {
     public static ArrayList<String> getLinks(String markdown) {
+        int counter = 0;
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then take up to
         // the next )
@@ -20,6 +21,10 @@ public class MarkdownParse {
             }
             // toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
+            counter += 1;
+            if(counter > 100){
+                break;
+            }
         }
         return toReturn;
     }
