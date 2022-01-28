@@ -1,7 +1,3 @@
-# title
 
-[stuff]
-
-paragraph
-
-(page.com)
+[[[]]]((((()))))
+[stuff](link.com)
