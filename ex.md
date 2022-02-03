@@ -1,1 +1,1 @@
-![image](randomim)[link](smth.com)
+a lin[](k!
