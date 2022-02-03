@@ -43,22 +43,6 @@ public class MarkdownParse {
         // the next )
         //  if(!(markdown.indexOf("[") < markdown.indexOf("]") && markdown.indexOf("]")< markdown.indexOf("(") && markdown.indexOf("(") < markdown.indexOf(")"))){ very clean code 100% (LOL)
         int currentIndex = 0;
-<<<<<<< HEAD
-        int stop = 0;
-        while(currentIndex < markdown.length()) {
-            int nextOpenBracket = markdown.indexOf("[", currentIndex);
-            int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
-            int openParen = markdown.indexOf("(", nextCloseBracket);
-            int closeParen = markdown.indexOf(")", openParen);
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
-            currentIndex = closeParen + 1;
-            stop += 1;
-            if(stop > 100){
-                break;
-            }
-            }
-        
-=======
         int nextOpenBracket = 0;
         int nextCloseBracket = markdown.indexOf("]");
         int openParen = markdown.indexOf("(");
@@ -90,7 +74,6 @@ public class MarkdownParse {
             }
             currentIndex = closeParen + 1;
         }
->>>>>>> 11427b1dc031317ff024f652c3a18ac1c974ee17
         return toReturn;
     }
 
