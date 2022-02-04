@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.ArrayList;
 
 public class MarkdownTest {
     @Test
@@ -88,6 +89,14 @@ public class MarkdownTest {
         String contents= Files.readString(Path.of("./test-file8.md"));
         List<String> expect = List.of();
         assertEquals(MarkdownParse.getLinks(contents), expect);
+    }
+
+    @Test
+    public void testFile9() throws IOException{
+        Path fileName = Path.of("ex2.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = getLinks(contents);
+        assertEquals("https://something.com", links);
     }
 
 
