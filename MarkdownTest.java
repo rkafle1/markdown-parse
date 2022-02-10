@@ -91,13 +91,6 @@ public class MarkdownTest {
         assertEquals(MarkdownParse.getLinks(contents), expect);
     }
 
-    @Test
-    public void testFile9() throws IOException{
-        Path fileName = Path.of("ex2.md");
-	    String contents = Files.readString(fileName);
-        ArrayList<String> links = getLinks(contents);
-        assertEquals("https://something.com", links);
-    }
 
 
 
